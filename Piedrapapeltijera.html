@@ -10,32 +10,28 @@
         {
            return Math.floor( Math.random()* (max - min + 1) + min)
         }
+        function eleccion(jugada)
+        {
+            let resultado; 
+            if(jugada == 1)
+        {
+            resultado = "Piedra 🥌"
+        } else if(jugada == 2)
+        {
+            resultado= "Papel 📃"
+        }else if(jugada == 3)
+        {
+            resultado = "tijera ✂"
+        } else
+        {
+            resultado= "Mala eleccion"
+        }
+        }
         
         let player = prompt("Eliege: 1 para piedra, Elige:2 para papel, y Eliege:3 para tijera")
         let pc = Randomnumbers(1,3)
-        if(player == 1)
-        {
-            alert("Elegiste 🥌")
-        } else if(player == 2)
-        {
-            alert("Elegiste 📃")
-        }else if(player == 3)
-        {
-            alert("Elegiste ✂")
-        } else
-        {
-            alert("Elegiste Perder")
-        }
-        if(pc == 1)
-        {
-            alert("Pc Eligio: 🥌")
-        } else if(pc == 2)
-        {
-            alert("Pc Eligio 📃")
-        }else if(pc == 3)
-        {
-            alert("Pc Eligio ✂")
-        }
+        alert("jugador elegio:" + eleccion(player))
+        alert("pc eligio:" + eleccion(pc))
         //Combate
         if(player == pc)
         {
