@@ -26,23 +26,45 @@
         {
             resultado= "Mala eleccion"
         }
+        return resultado
         }
-        
-        let player = prompt("Eliege: 1 para piedra, Elige:2 para papel, y Eliege:3 para tijera")
-        let pc = Randomnumbers(1,3)
-        alert("jugador elegio:" + eleccion(player))
-        alert("pc eligio:" + eleccion(pc))
-        //Combate
-        if(player == pc)
+        function combate(a, b)
         {
-            alert("Empate!!!")
-        } else if((player == 1 && pc ==3) || (player == 2 && pc == 1) || (player == 3 && pc == 2))
+        let result = ""
+            if(a == b)
         {
-            alert("You Win")
+            result = "empate"
+        } else if((a == 1 && b == 3) || (a == 2 && b == 1) || (a == 3 && b == 2))
+        {
+            result = "Ganaste"
+            triunfos++
         } else 
         {
-            alert("You lose")
-        }  
+            result = "Perdiste"
+            perdidas++
+        }
+            return result
+        }
+
+        let player = 0
+        let pc = Randomnumbers(1,3)
+        let triunfos = 0
+        let perdidas = 0
+        let empate = 0
+
+        while(triunfos < 3 && perdidas <3)
+        {
+        
+            let player = prompt("Eliege: 1 para piedra, Elige:2 para papel, y Eliege:3 para tijera")
+            let pc = Randomnumbers(1,3)
+        
+            alert("jugador elegio:" + eleccion(player))
+            alert("pc eligio:" + eleccion(pc))
+        
+        //Combate
+        alert("tu " + combate(player,pc))
+        }
+        alert("Ganaste " + triunfos + " veces . perdiste " + perdidas + " veces.")
     </script>
 </head>
 <body>
