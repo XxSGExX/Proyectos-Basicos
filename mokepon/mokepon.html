@@ -5,13 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOKEON</title>
+    <script src="./JS/mokepon.js"></script>
 </head>
 <body>
-    <h1>MOKEPON 💧🔥🌱</h1>
-    <P>
-        <button>Fuego 🔥</button>
-        <button>Agua 💧</button>
-        <button>Tierra 🌱</button>
-    </P>
+    <main>
+        <h1>MOKEPON 💧🔥🌱</h1>
+
+        <section id="select-mokepon">
+            <h2>Elige a tu mokepon</h2>
+            
+            <label for="Hipodoge">Hipodoge</label>
+            <input type="radio"  name="mokepon" id="Hipodoge" />
+            
+            <label for="Capipepo">Capipepo</label>
+            <input type="radio" name="mokepon"  id="Capipepo" />
+            
+            <label for="Ratigueya">Ratigueya</label>
+            <input type="radio" name="mokepon"  id="Ratigueya" />
+
+            <button>Seleccionar</button>
+        </section>
+            
+        <section id="select-attack">
+            <h2>Elige a tu ataque</h2>
+
+            <p>Tu mokepon tiene <span>3</span> vidas</p>
+            <p>Las mokepon del enemigo tiene <span>3</span>  vidas</p>
+            
+            <P>
+                <button>Fuego 🔥</button>
+                <button>Agua 💧</button>
+                <button>Tierra 🌱</button>
+            </P>
+        </section>
+
+        <section id="mensajes">
+            <p>tu mokepon ataco con Fuego, y el mokepon enemigo ataquo con Tierra - Ganaste 🎉</p>
+        </section>
+
+        <section id="reiniciar">
+            <button>reiniciar</button>
+        </section>
+    </main>
 </body>
 </html>
