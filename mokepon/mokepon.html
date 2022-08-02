@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOKEON</title>
-    <script src="./JS/mokepon.js"></script>
 </head>
 <body>
     <main>
@@ -23,7 +22,7 @@
             <label for="Ratigueya">Ratigueya</label>
             <input type="radio" name="mokepon"  id="Ratigueya" />
 
-            <button>Seleccionar</button>
+            <button id="boton-mokepon">Seleccionar</button>
         </section>
             
         <section id="select-attack">
@@ -33,9 +32,9 @@
             <p>Las mokepon del enemigo tiene <span>3</span>  vidas</p>
             
             <P>
-                <button>Fuego 🔥</button>
-                <button>Agua 💧</button>
-                <button>Tierra 🌱</button>
+                <button id="boton-fuego">Fuego 🔥</button>
+                <button id="boton-agua">Agua 💧</button>
+                <button id="boton-tierra">Tierra 🌱</button>
             </P>
         </section>
 
@@ -44,8 +43,10 @@
         </section>
 
         <section id="reiniciar">
-            <button>reiniciar</button>
+            <button id="boton-reinicar">reiniciar</button>
         </section>
     </main>
+    
+    <script src="./JS/mokepon.js"></script>
 </body>
 </html>
