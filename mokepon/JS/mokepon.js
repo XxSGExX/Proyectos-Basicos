@@ -19,15 +19,15 @@ function seleccionarMokeponJugador() {
     let mokeponratigueya = document.getElementById('Ratigueya')
     let spanMokeponJugador = document.getElementById('mokepon-jugador')
     
-    if(mokeponhipodoge.checked == true)
+    if (mokeponhipodoge.checked == true)
     {
         spanMokeponJugador.innerHTML = 'Hipodoge'
 
-    } else if(mokeponcapipepo.checked == true)
+    } else if (mokeponcapipepo.checked == true)
     {
         spanMokeponJugador.innerHTML = 'Capipepo'
 
-    } else if(mokeponratigueya.checked == true)
+    } else if (mokeponratigueya.checked == true)
     {
         spanMokeponJugador.innerHTML = 'Ratigueya'
     } else {
@@ -41,7 +41,7 @@ function seleccionarMokeponEnemigo() {
     let seleccionAleatorio = Randomnumbers(1,3)
     let spanMokeponEnemigo = document.getElementById('mokepon-enemigo')
 
-    if  (seleccionAleatorio == 1) {
+    if (seleccionAleatorio == 1) {
         spanMokeponEnemigo.innerHTML = 'Hipodoge'
     } else if (seleccionAleatorio == 2) {
         spanMokeponEnemigo.innerHTML = 'Capipepo'
@@ -52,17 +52,17 @@ function seleccionarMokeponEnemigo() {
 }  
     //fuciones para los ataques de los mokepones
 function ataqueFuego() {
-    ataqueJugador = 'FUEGO'
+    ataqueJugador = 'FUEGO🔥'
     ataqueEnemigoAleatorio()
 }
 
 function ataqueAgua() {
-    ataqueJugador = 'AGUA'
+    ataqueJugador = 'AGUA💧'
     ataqueEnemigoAleatorio()
 }
 
 function ataqueTierra() {
-    ataqueJugador = 'TIERRA'
+    ataqueJugador = 'TIERRA🌱'
     ataqueEnemigoAleatorio()
 }
 
@@ -70,23 +70,32 @@ function ataqueEnemigoAleatorio() {
     let ataqueAleatorio = Randomnumbers(1,3)
     switch(ataqueAleatorio) {
         case 1:
-            ataqueEnemigo = 'FUEGO'
+            ataqueEnemigo = 'FUEGO🔥'
             break;
         case 2:
-            ataqueEnemigo = 'AGUA'
+            ataqueEnemigo = 'AGUA💧'
             break;
         case 3:
-            ataqueEnemigo = 'TIERRA'
+            ataqueEnemigo = 'TIERRA🌱'
             break;
     }
-
-    crearMensajes()
+    combateMokepon()
+}
+    //Funcion del combate
+function combateMokepon() { 
+    if (ataqueEnemigo == ataqueJugador) {
+        crearMensajes('EMPATE')
+    } else if((ataqueJugador == 'FUEGO🔥' && ataqueEnemigo == 'TIERRA🌱') || (ataqueJugador == 'AGUA💧' && ataqueEnemigo  == 'FUEGO🔥') || (ataqueJugador == 'TIERRA🌱' && ataqueEnemigo  == 'AGUA💧')) {
+        crearMensajes('GANASTE')
+    } else {
+        crearMensajes('PERDISTE')
+    }
 }
 
-function crearMensajes() {
+function crearMensajes(result) {
     let sectionMensajes = document.getElementById('mensajes')
     let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu mokepon ataco con '   + ataqueJugador + ', el mokepon enemgio ataco con  ' + ataqueEnemigo + ' PENDIENTE'
+    parrafo.innerHTML = 'Tu mokepon ataco con '   + ataqueJugador + ', el mokepon enemgio ataco con  ' + ataqueEnemigo + "- " + result
 
     sectionMensajes.appendChild(parrafo)
 }
