@@ -4,9 +4,15 @@ let vidasEnemigo = 3;
 let vidasJugador = 3;
 
 function iniciarJuego() {
+    let sectionSeleccionarAtaque = document.getElementById("select-attack");
+    sectionSeleccionarAtaque.style.display = 'none';
+
+    let sectionReiniciar = document.getElementById("reiniciar");
+    sectionReiniciar.style.display = 'none';
+
     let botonMascotaJugador = document.getElementById('boton-mokepon');
     botonMascotaJugador.addEventListener('click', seleccionarMokeponJugador);
-
+    
     let botonFuego = document.getElementById('boton-fuego');
     botonFuego.addEventListener('click', ataqueFuego);
     let botonAgua = document.getElementById('boton-agua');
@@ -19,6 +25,12 @@ function iniciarJuego() {
 }
     //Logica de seleccion de los mokepones del jugador
 function seleccionarMokeponJugador() {
+    let sectionSeleccionarmokepon = document.getElementById("select-mokepon");
+    sectionSeleccionarmokepon.style.display = 'none';
+    
+    let sectionSeleccionarAtaque = document.getElementById("select-attack");
+    sectionSeleccionarAtaque.style.display = 'block';
+    
     let mokeponhipodoge = document.getElementById('Hipodoge');
     let mokeponcapipepo = document.getElementById('Capipepo');
     let mokeponratigueya = document.getElementById('Ratigueya');
@@ -58,17 +70,17 @@ function seleccionarMokeponEnemigo() {
     //fuciones para los ataques de los mokepones
 function ataqueFuego() {
     ataqueJugador = 'FUEGO🔥'
-    ataqueEnemigoAleatorio()
+    ataqueEnemigoAleatorio();
 }
 
 function ataqueAgua() {
     ataqueJugador = 'AGUA💧'
-    ataqueEnemigoAleatorio()
+    ataqueEnemigoAleatorio();
 }
 
 function ataqueTierra() {
     ataqueJugador = 'TIERRA🌱'
-    ataqueEnemigoAleatorio()
+    ataqueEnemigoAleatorio();
 }
 
 function ataqueEnemigoAleatorio() {
@@ -123,6 +135,8 @@ function crearMensajes(result) {
     sectionMensajes.appendChild(parrafo);
 }
 function crearMensajesFinal(resultFinal) {
+    let sectionReiniciar = document.getElementById("reiniciar");
+    sectionReiniciar.style.display = 'block';
     let sectionMensajes = document.getElementById('mensajes');
     let parrafo = document.createElement('p');
     parrafo.innerHTML = resultFinal;
@@ -130,16 +144,16 @@ function crearMensajesFinal(resultFinal) {
     sectionMensajes.appendChild(parrafo);
 
     let botonFuego = document.getElementById('boton-fuego');
-    botonFuego.disabled = true
+    botonFuego.disabled = true;
     let botonAgua = document.getElementById('boton-agua');
-    botonAgua.disabled = true
+    botonAgua.disabled = true;
     let botonTierra = document.getElementById('boton-tierra');
-    botonTierra.disabled = true
+    botonTierra.disabled = true;
 
 }
 
 function reinicarJuego() {
-    location.reload()
+    location.reload();
 }
 
 function Randomnumbers(min, max) {
