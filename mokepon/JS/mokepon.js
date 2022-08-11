@@ -29,7 +29,7 @@ function seleccionarMokeponJugador() {
     sectionSeleccionarmokepon.style.display = 'none';
     
     let sectionSeleccionarAtaque = document.getElementById("select-attack");
-    sectionSeleccionarAtaque.style.display = 'block';
+    sectionSeleccionarAtaque.style.display = 'flex';
     
     let mokeponhipodoge = document.getElementById('Hipodoge');
     let mokeponcapipepo = document.getElementById('Capipepo');

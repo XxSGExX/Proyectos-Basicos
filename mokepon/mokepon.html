@@ -10,42 +10,62 @@
 </head>
 <body>
     <main>
-        <h1>MOKEPON 💧🔥🌱</h1>
             <!-- section de las seleccion del los mokepones -->
         <section id="select-mokepon">
-            <h2>Elige a tu mokepon</h2>
+            <h1 class="title">MOKEPON 💧🔥🌱</h1>
             
-            <label for="Hipodoge">Hipodoge</label>
-            <input type="radio"  name="mokepon" id="Hipodoge" />
+            <h2 class="subtitle">Elige a tu mokepon:</h2>
             
-            <label for="Capipepo">Capipepo</label>
-            <input type="radio" name="mokepon"  id="Capipepo" />
-            
-            <label for="Ratigueya">Ratigueya</label>
-            <input type="radio" name="mokepon"  id="Ratigueya" />
+            <div class="tarjetas">
+                <label class="tarjeta-de-mokepon" for="Hipodoge">
+                    <p>Hipodoge</p>
+                    <img src="./assets/mokepons_mokepon_hipodoge_attack.png" alt="Hipodoge">
+                </label>
+                <input type="radio"  name="mokepon" id="Hipodoge" />
+                
+                <label class="tarjeta-de-mokepon" for="Capipepo">
+                    <p>Capipepo</p>
+                    <img src="./assets/mokepons_mokepon_capipepo_attack.png" alt="Capipepo">
+                </label>
+                <input type="radio" name="mokepon"  id="Capipepo" />
+                
+                <label class="tarjeta-de-mokepon" for="Ratigueya">
+                    <p>Ratigueya</p>
+                    <img src="./assets/mokepons_mokepon_ratigueya_attack.png" alt="Ratigueya">
+                </label>
+                <input type="radio" name="mokepon"  id="Ratigueya" />
+            </div>
 
             <button id="boton-mokepon">Seleccionar</button>
         </section>
             <!-- Section de la la seleccion de los ataques de los mokepones -->
         <section id="select-attack">
-            <h2>Elige a tu ataque</h2>
+            <h1 class="title">MOKEPON 💧🔥🌱</h1>
+            
+            <h2 class="subtitle">Elige a tu ataque</h2>
 
+            <div>
+                <button id="boton-fuego"  class="boton_ataque">Fuego 🔥</button>
+                <button id="boton-agua"   class="boton_ataque">Agua 💧</button>
+                <button id="boton-tierra" class="boton_ataque">Tierra 🌱</button>
+            </div>
+
+            <div> 
+            </section>
+                <!-- Section de los Mensajes que tiene que resivir el usuario al jugar -->
+            <section id="mensajes">
+            </section>
+    
+            <section id="reiniciar">
+                <button id="boton-reinicar">reiniciar</button>
+            </section>
+            </div>
+
+            <div>
             <p>Tu mokepon es <span id="mokepon-jugador">nombre</span> tiene <span id="vidas-jugador">3</span> vidas</p>
             <p>el mokepon <span id="mokepon-enemigo">enemigo</span> del enemigo tiene <span id="vidas-enemigo">3</span>  vidas</p>
-            
-            <P>
-                <button id="boton-fuego">Fuego 🔥</button>
-                <button id="boton-agua">Agua 💧</button>
-                <button id="boton-tierra">Tierra 🌱</button>
-            </P>
-        </section>
-            <!-- Section de los Mensajes que tiene que resivir el usuario al jugar -->
-        <section id="mensajes">
-        </section>
+            </div>
 
-        <section id="reiniciar">
-            <button id="boton-reinicar">reiniciar</button>
-        </section>
-    </main>
-</body>
+        </main>
+    </body>
 </html>

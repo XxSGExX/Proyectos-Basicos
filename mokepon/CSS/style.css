@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+    font-family: 'Fredoka One', cursive;
+    background-color: #041562;
+}
+
+#select-mokepon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: white;
+    font-size: 35px;
+}
+.subtitle {
+    color: white;
+    font-size: 22px;
+}
+
+.tarjetas{
+    display: flex;
+}
+
+.tarjeta-de-mokepon {
+    width: 180px;
+    height: 100px;
+    background-color: #11468f;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+.tarjeta-de-mokepon img {
+    width: 80px;
+    
+}
+
+input {
+    display: none;
+}
+#boton-mokepon {
+    padding: 5px;
+    margin: 1px;
+    background-color: #11698E;
+    border: 2px solid white;
+    font-weight: bold;
+    width: 20vw;
+    height: 7vh;
+    color: white;
+    border-radius: 30px;
+    background: transparent;
+    margin-top: 30px;
+}
+
+#select-attack {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.boton_ataque {
+    color: white;
+    background-color: #11698E;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-color: transparent;
+    width: 110px;
+    font-size: 15px;
+}
