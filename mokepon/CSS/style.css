@@ -8,7 +8,6 @@ body {
 #select-mokepon {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -38,6 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     border: 2px solid black;
+    cursor: pointer;
 }
 .tarjeta-de-mokepon img {
     width: 80px;
@@ -59,10 +59,11 @@ input {
     border-radius: 30px;
     background: transparent;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 #select-attack {
-    justify-content: center;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -75,4 +76,30 @@ input {
     border-color: transparent;
     width: 110px;
     font-size: 15px;
+    cursor: pointer;
+}
+
+#mensajes {
+    width: 280px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background: #EEEEEE;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#boton-reinicar {
+    border: transparent;
+    color: #11698E;
+    cursor: pointer;
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    justify-items: center;
+    text-align: center;
 }

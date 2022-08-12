@@ -128,20 +128,27 @@ function revisarVidas() {
 }
 
 function crearMensajes(result) {
-    let sectionMensajes = document.getElementById('mensajes');
-    let parrafo = document.createElement('p');
-    parrafo.innerHTML = 'Tu mokepon ataco con '   + ataqueJugador + ', el mokepon enemgio ataco con  ' + ataqueEnemigo + "- " + result
+    let sectionMensajes = document.getElementById('resultado');
+    let ataqueDelJugador = document.getElementById('ataque-del-jugador');
+    let ataqueDelEnemigo = document.getElementById('ataque-del-enemigo');
+    
+    let nuevoAtaqueJugador = document.createElement('p');
+    let nuevoAtaqueEnemigo = document.createElement('p');
 
-    sectionMensajes.appendChild(parrafo);
+
+    sectionMensajes.innerHTML = result;
+    nuevoAtaqueJugador.innerHTML = ataqueJugador;
+    nuevoAtaqueEnemigo.innerHTML = ataqueEnemigo;
+
+    ataqueDelJugador.appendChild(nuevoAtaqueJugador);
+    ataqueDelEnemigo.appendChild(nuevoAtaqueEnemigo);
 }
 function crearMensajesFinal(resultFinal) {
     let sectionReiniciar = document.getElementById("reiniciar");
     sectionReiniciar.style.display = 'block';
-    let sectionMensajes = document.getElementById('mensajes');
+    let sectionMensajes = document.getElementById('resultado');
     let parrafo = document.createElement('p');
-    parrafo.innerHTML = resultFinal;
-
-    sectionMensajes.appendChild(parrafo);
+    sectionMensajes.innerHTML = resultFinal;
 
     let botonFuego = document.getElementById('boton-fuego');
     botonFuego.disabled = true;
