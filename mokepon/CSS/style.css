@@ -20,8 +20,9 @@ body {
     font-size: 22px;
 }
 
-.tarjetas, .ataques-mokepon {
+.tarjetas, .ataques-mokepon , .ataques-mokepon {
     display: flex;
+    gap: 10px;
     gap: 10px;
 }
 
@@ -48,6 +49,11 @@ body {
 input {
     display: none;
 }
+
+input:checked + label  {
+    background-color: #5D8BF4;
+}
+
 
 input:checked + label  {
     background-color: #5D8BF4;
@@ -102,6 +108,8 @@ input:checked + label  {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .ataques {
@@ -110,6 +118,36 @@ input:checked + label  {
     justify-items: center;
     text-align: center;
     color: white;
+}
+
+@media (max-width: 360px) {
+    .tarjetas {
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 25px;
+        display: flex;
+        margin-left: 33px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+    #boton-mokepon {
+    width: auto;
+    height: auto;
+    }
+
+    .ataques-mokepon {
+        flex-direction: column;
+    }
+
+    #mensajes {
+        width: 250px;
+        color: white;
+    }
+    
 }
 
 #ver-mapa {
