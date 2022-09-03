@@ -14,13 +14,14 @@ body {
 .title {
     color: white;
     font-size: 35px;
+    text-align: center;
 }
 .subtitle {
     color: white;
     font-size: 22px;
 }
 
-.tarjetas, .ataques-mokepon , .ataques-mokepon {
+.tarjetas, .ataques-mokepon {
     display: flex;
     gap: 10px;
     gap: 10px;
@@ -60,13 +61,10 @@ input:checked + label  {
 }
 
 #boton-mokepon {
-    padding: 5px;
-    margin: 1px;
     background-color: #11698E;
     border: 2px solid white;
     font-weight: bold;
-    width: 20vw;
-    height: 7vh;
+    height: 5vh;
     color: white;
     border-radius: 30px;
     background: transparent;
@@ -119,70 +117,32 @@ input:checked + label  {
     text-align: center;
     color: white;
 }
-
-@media (max-width: 360px) {
-    .tarjetas {
-        flex-direction: column;
-    }
-
-    .title {
-        font-size: 25px;
-        display: flex;
-        margin-left: 33px;
-    }
-
-    .subtitle {
-        font-size: 20px;
-    }
-    #boton-mokepon {
-    width: auto;
-    height: auto;
-    }
-
-    .ataques-mokepon {
-        flex-direction: column;
-    }
-
-    #mensajes {
-        width: 250px;
-        color: white;
-    }
-    
-}
-
 #ver-mapa {
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#mapa {
+
+#ver-mapa button {
     border: 2px solid white;
+    font-weight: bold;
+    width: 80px;
+    height: 40px;
+    color: white;
+    border-radius: 30px;
+    background: transparent;
+    margin: 10px 0;
+    cursor: pointer;
 }
-
-@media (max-width: 360px) {
-    .tarjetas {
+@media (max-width: 560px) {
+    .tarjetas, .ataques-mokepon {
         flex-direction: column;
     }
-
-    .title {
-        font-size: 25px;
+}
+@media (max-width: 300px) {
+    #ver-mapa div {
         display: flex;
-        margin-left: 33px;
-    }
-
-    .subtitle {
-        font-size: 20px;
-    }
-    #boton-mokepon {
-    width: auto;
-    height: auto;
-    }
-
-    .ataques-mokepon {
+        align-items: center;
         flex-direction: column;
     }
-
-    #mensajes {
-        width: 250px;;
-    }
-}
+    } 
